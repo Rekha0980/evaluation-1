@@ -1,14 +1,17 @@
 let product=JSON.parse(localStorage.getItem("product"))||[];
+function showproduct(product){
+    document.querySelector("#all_products").innerHTML=null;
+
 product.map(function(el,index){
     let box=document.createElement("div")
     
     let type=document.createElement("p");
     type.innerText=el.type;
     let price=document.createElement("p");
-    type.innerText=el.price;
+    price.innerText=el.price;
     
     let desc=document.createElement("p");
-    desc.innerText=el.type;
+    desc.innerText=el.desc;
     
     let img=document.createElement("img");
     img.src=el.image;
@@ -24,8 +27,11 @@ product.map(function(el,index){
     
 
 })
+}
+showproduct(product)
 function remove(index){
     product.splice(index,1)
     localStorage.setItem("product",JSON.stringify(product))
+    showproduct(product)
 
 }

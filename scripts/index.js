@@ -17,10 +17,10 @@ function myfun(){
     //console.log(p)
     arr.push(p)
     localStorage.setItem("product",JSON.stringify(arr))
-    var type=document.getElementById("type").value=""
-    var desc=document.getElementById("desc").value=""
-    var price=document.getElementById("price").value=""
-    var img=document.getElementById("image").value=""
+    document.getElementById("type").value=""
+    document.getElementById("desc").value=""
+    document.getElementById("price").value=""
+    document.getElementById("image").value=""
 
 }
    
